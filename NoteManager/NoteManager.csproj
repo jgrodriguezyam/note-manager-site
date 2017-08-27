@@ -209,6 +209,7 @@
     <Content Include="Content\Css\Home\Index.css" />
     <Content Include="Content\Images\flag-mexico.png" />
     <Content Include="Content\Images\flag-usa.png" />
+    <Content Include="Content\Images\logo.png" />
     <Content Include="Content\Images\pdf.png" />
     <Content Include="Content\Scripts\Account\Login.js" />
     <Content Include="Content\Scripts\Company\Edit.js" />
