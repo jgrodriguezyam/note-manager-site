@@ -1,9 +1,11 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Web.Mvc;
 using FastMapper;
 using NoteManager.DTO.Users;
 using NoteManager.Infrastructure.Attributes;
 using NoteManager.Infrastructure.Cookies;
 using NoteManager.Infrastructure.Enums;
+using NoteManager.Infrastructure.TempDatas;
 using NoteManager.Models.Users;
 using NoteManager.Services.Interfaces;
 
@@ -22,10 +24,18 @@ namespace NoteManager.Controllers
         [AllowAnonymous]
         public ActionResult Login(LoginUser loginUser)
         {
-            var loginUserRequest = TypeAdapter.Adapt<LoginUser, LoginUserRequest>(loginUser);
-            var userResponse = _userService.Login(loginUserRequest);
-            this.CreateCookie(loginUser.UserName, loginUser.Password, userResponse.UserId, true);
-            return RedirectToAction(EAction.Index.ToString(), EController.Home.ToString());
+            try
+            {
+                var loginUserRequest = TypeAdapter.Adapt<LoginUser, LoginUserRequest>(loginUser);
+                var userResponse = _userService.Login(loginUserRequest);
+                this.CreateCookie(loginUser.UserName, loginUser.Password, userResponse.UserId, true);
+                return RedirectToAction(EAction.Index.ToString(), EController.Home.ToString());
+            }
+            catch (Exception exception)
+            {
+                new TempDataFactory().CreateFailure(this, exception.Message);
+                return RedirectToAction(EAction.Login.ToString(), EController.Account.ToString());
+            }
         }
 
         [HttpGet]
