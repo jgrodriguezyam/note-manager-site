@@ -2,6 +2,7 @@
 using System.Web.Mvc;
 using FastMapper;
 using NoteManager.DTO.Customers;
+using NoteManager.Infrastructure.Attributes;
 using NoteManager.Infrastructure.Constants;
 using NoteManager.Infrastructure.Enums;
 using NoteManager.Infrastructure.JsonResults;
@@ -10,6 +11,7 @@ using NoteManager.Services.Interfaces;
 
 namespace NoteManager.Controllers
 {
+    [Authenticate]
     public class CustomerController : Controller
     {
         private readonly ICustomerService _customerService;
@@ -37,7 +39,7 @@ namespace NoteManager.Controllers
         {
             var customerRequest = TypeAdapter.Adapt<Customer, CustomerRequest>(customer);
             _customerService.Create(customerRequest);
-            return new JsonFactory().Success(GlobalConstants.SavedSuccessfully);
+            return new JsonFactory().Success(MessageConstants.SavedSuccessfully);
         }
 
         [HttpGet]
@@ -53,7 +55,7 @@ namespace NoteManager.Controllers
         {
             var customerRequest = TypeAdapter.Adapt<Customer, CustomerRequest>(customer);
             _customerService.Update(customerRequest);
-            return new JsonFactory().Success(GlobalConstants.SavedSuccessfully);
+            return new JsonFactory().Success(MessageConstants.SavedSuccessfully);
         }
 
         [HttpGet]
@@ -83,7 +85,15 @@ namespace NoteManager.Controllers
         public JsonResult Delete(int id)
         {
             _customerService.Delete(id);
-            return new JsonFactory().Success(GlobalConstants.DeletedSuccessfully);
+            return new JsonFactory().Success(MessageConstants.DeletedSuccessfully);
+        }
+
+        [HttpGet]
+        public ActionResult Print(int id)
+        {
+            var customerResponse = _customerService.Get(id);
+            var customer = TypeAdapter.Adapt<CustomerResponse, Customer>(customerResponse);
+            return View(EAction.Print.ToString(), customer);
         }
     }
 }

@@ -69,7 +69,6 @@ namespace NoteManager.Infrastructure.Client
                 restRequest.AddParameter("application/json", objectBody.Serialize(),
                     ParameterType.RequestBody);
             var response = ExcecuteRestClient<CreationResponse>(restRequest);
-            //SessionSettings.AssignIdCreated(response.Id);
             return response;
         }
 

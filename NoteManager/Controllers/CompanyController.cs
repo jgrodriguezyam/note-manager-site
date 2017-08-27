@@ -2,6 +2,7 @@
 using System.Web.Mvc;
 using FastMapper;
 using NoteManager.DTO.Companies;
+using NoteManager.Infrastructure.Attributes;
 using NoteManager.Infrastructure.Constants;
 using NoteManager.Infrastructure.Enums;
 using NoteManager.Infrastructure.JsonResults;
@@ -10,6 +11,7 @@ using NoteManager.Services.Interfaces;
 
 namespace NoteManager.Controllers
 {
+    [Authenticate]
     public class CompanyController : Controller
     {
         private readonly ICompanyService _companyService;
@@ -37,7 +39,7 @@ namespace NoteManager.Controllers
         {
             var companyRequest = TypeAdapter.Adapt<Company, CompanyRequest>(company);
             _companyService.Create(companyRequest);
-            return new JsonFactory().Success(GlobalConstants.SavedSuccessfully);
+            return new JsonFactory().Success(MessageConstants.SavedSuccessfully);
         }
 
         [HttpGet]
@@ -53,7 +55,7 @@ namespace NoteManager.Controllers
         {
             var companyRequest = TypeAdapter.Adapt<Company, CompanyRequest>(company);
             _companyService.Update(companyRequest);
-            return new JsonFactory().Success(GlobalConstants.SavedSuccessfully);
+            return new JsonFactory().Success(MessageConstants.SavedSuccessfully);
         }
 
         [HttpGet]
@@ -83,7 +85,7 @@ namespace NoteManager.Controllers
         public JsonResult Delete(int id)
         {
             _companyService.Delete(id);
-            return new JsonFactory().Success(GlobalConstants.DeletedSuccessfully);
+            return new JsonFactory().Success(MessageConstants.DeletedSuccessfully);
         }
     }
 }

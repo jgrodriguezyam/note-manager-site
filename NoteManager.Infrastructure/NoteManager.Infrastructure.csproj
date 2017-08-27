@@ -75,10 +75,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Attributes\AuthenticateAttribute.cs" />
     <Compile Include="Attributes\ExceptionAttribute.cs" />
     <Compile Include="Attributes\Extensions\ActionExecutingContextExtensions.cs" />
     <Compile Include="Attributes\Extensions\ExceptionContextExtensions.cs" />
     <Compile Include="Attributes\Extensions\ResultExecutingContextExtensions.cs" />
+    <Compile Include="Attributes\NoLoginAttribute.cs" />
     <Compile Include="Client\BaseResponse\CreationResponse.cs" />
     <Compile Include="Client\BaseResponse\Enumerator.cs" />
     <Compile Include="Client\BaseResponse\ExceptionResponse.cs" />
@@ -101,12 +103,9 @@
     <Compile Include="Dates\Enums\EDayWeek.cs" />
     <Compile Include="Decimals\DecimalExtensions.cs" />
     <Compile Include="Dictionaries\ExceptionDictionary.cs" />
-    <Compile Include="Dictionaries\MessageDictionary.cs" />
-    <Compile Include="Dictionaries\ModelDictionary.cs" />
     <Compile Include="Doubles\DoubleExtensions.cs" />
     <Compile Include="Enums\EAction.cs" />
     <Compile Include="Enums\EController.cs" />
-    <Compile Include="Enums\EntityType.cs" />
     <Compile Include="Enums\Enumerator.cs" />
     <Compile Include="Enums\EnumExtensions.cs" />
     <Compile Include="Enums\EPartialView.cs" />

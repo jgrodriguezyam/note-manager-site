@@ -19,7 +19,7 @@ createTable({
               [municipalityColumn, "Municipio", true],
               [homePhoneColumn, "Telefono", true],
               [cellPhoneColumn, "Celular", true]],
-    Buttons: [buttonInfo, buttonEdit, buttonDelete],
+    Buttons: [buttonPrint, buttonInfo, buttonEdit, buttonDelete],
     Filters: filtersTable,
     CardView: { ApplyCardView: true, WidthPerApply: 600 },
     SortingAndPagination: { SortBy: idColumn, Sort: "DESC" },
@@ -65,4 +65,12 @@ function buttonInfo(buttons) {
     };
 
     return " <button class='btnInfo btn btn-default btn-sm' data-toggle='tooltip' title='Informacion'><i class='fa fa-info-circle'></i></button>";
+}
+
+function buttonPrint(buttons) {
+    buttons.OperateEvents['click .printSheet'] = function (event, value, row) {
+        redirectWithId("Customer", "Print", row.Id);
+    };
+
+    return " <button class='printSheet btn btn-info btn-sm' data-toggle='tooltip' title='Imprimir'><i class='fa fa-print'></i></button>";
 }

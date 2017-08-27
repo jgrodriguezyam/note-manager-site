@@ -29,6 +29,25 @@ namespace NoteManager.Content.Bundles
                     "~/Content/Scripts/General.js",
                     "~/Content/Scripts/ResourcesJavaScript.js"));
 
+            bundles.Add(new ScriptBundle(string.Format(WebConstants.RootBundleScripts, "Shared", "Login"))
+                .Include(
+                    "~/Content/Components/JQuery/Scripts/JQuery.min.js",
+                    "~/Content/Components/Bootstrap/Scripts/Bootstrap.min.js",
+                    "~/Content/Components/Bootstrap/Scripts/Bootstrap-autohidingnavbar.min.js",
+                    "~/Content/Components/Bootstrap/Scripts/Bootstrap-dialog.min.js",
+                    "~/Content/Components/Bootstrap/Scripts/Bootstrap-filestyle.min.js",
+                    "~/Content/Components/BootstrapTable/Scripts/BootstrapTable.min.js",
+                    "~/Content/Components/Messenger/Scripts/Messenger.min.js",
+                    "~/Content/Components/DateRangePicker/Scripts/moment.min.js",
+                    "~/Content/Components/DateRangePicker/Scripts/daterangepicker.js",
+                    "~/Content/Components/PopupOverlay/Scripts/PopupOverlay.min.js",
+                    "~/Content/Components/SlimScroll/Scripts/SlimScroll.min.js",
+                    "~/Content/Components/Bootstrap/Scripts/Bootstrap-customradio.min.js",
+                    "~/Content/Components/MetisMenu/metisMenu.min.js",
+                    "~/Content/Components/Admin/js/sb-admin-2.js",
+                    "~/Content/Scripts/General.js",
+                    "~/Content/Scripts/ResourcesJavaScript.js"));
+
             #endregion
 
             #region Home
@@ -88,6 +107,17 @@ namespace NoteManager.Content.Bundles
                     "~/Content/Components/JQueryValidation/Scripts/jquery.validate.unobtrusive.min.js",
                     "~/Content/Scripts/Company/Form.js",
                     "~/Content/Scripts/Company/Edit.js"));
+
+            #endregion
+
+            #region Account
+
+            bundles.Add(new ScriptBundle(string.Format(WebConstants.RootBundleScripts, EController.Account, EAction.Login))
+                .Include(
+                    "~/Content/Scripts/Account/Login.js",
+                    "~/Content/Components/JQueryValidation/Scripts/jquery.validate.min.js",
+                    "~/Content/Components/JQueryValidation/Scripts/additional-methods.min.js",
+                    "~/Content/Components/JQueryValidation/Scripts/jquery.validate.unobtrusive.min.js"));
 
             #endregion
         }

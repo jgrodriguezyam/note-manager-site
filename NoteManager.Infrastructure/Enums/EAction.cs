@@ -3,14 +3,15 @@
     public enum EAction
     {
         Login,
+        LoginServer,
         Logout,
         ChangePassword,
-        LogOff,
         Index,
         New,
         Create,
         Edit,
         Update,
-        Details
+        Details,
+        Print
     }
 }

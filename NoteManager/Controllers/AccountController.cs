@@ -3,13 +3,13 @@ using NoteManager.Infrastructure.Attributes;
 
 namespace NoteManager.Controllers
 {
-    [Authenticate]
-    public class HomeController : Controller
+    public class AccountController : Controller
     {
         [HttpGet]
-        public ActionResult Index()
+        [NoLogin]
+        public ActionResult Login()
         {
-            return View();
+            return View("Login");
         }
     }
 }

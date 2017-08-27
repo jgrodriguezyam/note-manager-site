@@ -16,7 +16,7 @@ namespace NoteManager.Infrastructure.Settings
             {
                 AssignTicks();
                 AssignUserId(0);
-                AssignUserName(String.Empty);
+                AssignUserName(string.Empty);
                 AssignCustomerId(0);
             }
         }
@@ -44,28 +44,6 @@ namespace NoteManager.Infrastructure.Settings
         public static void AssignWorkerId(int workerId) {
             HttpContext.Current.Session.Add(SessionConstants.WorkerId, workerId);
         }
-
-        public static void AssignSuyverComplete(bool survey)
-        {
-            HttpContext.Current.Session.Add(SessionConstants.CustomerSurveyComplete, survey);
-        }
-
-        public static void AssignFullName(string fullName) {
-            HttpContext.Current.Session.Add(SessionConstants.CustomerFullName, fullName);
-        }
-
-        public static void AssignProfileUser(int profile)
-        {
-            HttpContext.Current.Session.Add(SessionConstants.Profile, profile);
-        }
-
-        #region Info Prestamo
-
-        public static void AssignIdSolicitude(int id) {
-            HttpContext.Current.Session.Add(SessionConstants.SolicitudeId, id);
-        }
-
-        #endregion
 
         #endregion
 
@@ -95,31 +73,6 @@ namespace NoteManager.Infrastructure.Settings
         {
             get { return Convert.ToInt32(HttpContext.Current.Session[SessionConstants.WorkerId]); }
         }
-
-        public static bool RetrieveSurveyComplete
-        {
-            get { return Convert.ToBoolean(HttpContext.Current.Session[SessionConstants.CustomerSurveyComplete]); }
-        }
-
-        public static string RetrieveFullName
-        {
-            get { return HttpContext.Current.Session[SessionConstants.CustomerFullName].ToString(); }
-        }
-
-        public static int RetrieveProfile
-        {
-            get { return Convert.ToInt32(HttpContext.Current.Session[SessionConstants.Profile]); }
-        }
-
-        #region Info Prestamos
-
-        public static int RetrieveSolicitudeId {
-            get { return Convert.ToInt32(HttpContext.Current.Session[SessionConstants.SolicitudeId]); }
-        }
-
-    
-
-        #endregion
 
         #endregion
 
@@ -156,6 +109,21 @@ namespace NoteManager.Infrastructure.Settings
                 try
                 {
                     return RetrieveCustomerId.IsGreaterThanZero();
+                }
+                catch
+                {
+                    return false;
+                }
+            }
+        }
+
+        public static bool ExistsWorkerId
+        {
+            get
+            {
+                try
+                {
+                    return RetrieveWorkerId.IsGreaterThanZero();
                 }
                 catch
                 {
