@@ -1,0 +1,33 @@
+﻿@using NoteManager.Infrastructure.Objects
+@using NoteManager.Infrastructure.TempDatas
+
+@{
+    var information = TempData[ETempData.Information.ToString()];
+    var success = TempData[ETempData.Success.ToString()];
+    var warning = TempData[ETempData.Warning.ToString()];
+    var failure = TempData[ETempData.Failure.ToString()];
+
+    if (TempData[ETempData.Information.ToString()].IsNotNull())
+    {
+        @Html.Information(information.ToString())
+        TempData[ETempData.Information.ToString()] = null;
+    }
+
+    if (TempData[ETempData.Success.ToString()].IsNotNull())
+    {
+        @Html.Success(success.ToString())
+        TempData[ETempData.Success.ToString()] = null;
+    }
+
+    if (TempData[ETempData.Warning.ToString()].IsNotNull())
+    {
+        @Html.Warning(warning.ToString())
+        TempData[ETempData.Warning.ToString()] = null;
+    }
+
+    if (failure.IsNotNull())
+    {
+        @Html.Failure(failure.ToString())
+        TempData[ETempData.Failure.ToString()] = null;
+    }
+}

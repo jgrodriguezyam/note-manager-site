@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EBED227A-EA01-4457-A58A-5038CE569364}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NoteManager.Infrastructure</RootNamespace>
+    <AssemblyName>NoteManager.Infrastructure</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.105.2.3\lib\net45\RestSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\ExceptionAttribute.cs" />
+    <Compile Include="Attributes\Extensions\ActionExecutingContextExtensions.cs" />
+    <Compile Include="Attributes\Extensions\ExceptionContextExtensions.cs" />
+    <Compile Include="Attributes\Extensions\ResultExecutingContextExtensions.cs" />
+    <Compile Include="Client\BaseResponse\CreationResponse.cs" />
+    <Compile Include="Client\BaseResponse\Enumerator.cs" />
+    <Compile Include="Client\BaseResponse\ExceptionResponse.cs" />
+    <Compile Include="Client\BaseResponse\FileResponse.cs" />
+    <Compile Include="Client\BaseResponse\SuccessResponse.cs" />
+    <Compile Include="Client\BaseResponse\UserLoginResponse.cs" />
+    <Compile Include="Client\Request.cs" />
+    <Compile Include="Client\Response.cs" />
+    <Compile Include="Collections\CollectionExtensions.cs" />
+    <Compile Include="Constants\ExceptionConstants.cs" />
+    <Compile Include="Constants\GlobalConstants.cs" />
+    <Compile Include="Constants\HtmlHelperConstants.cs" />
+    <Compile Include="Constants\MessageConstants.cs" />
+    <Compile Include="Constants\PluralEntityConstants.cs" />
+    <Compile Include="Constants\SessionConstants.cs" />
+    <Compile Include="Constants\WebConstants.cs" />
+    <Compile Include="Cookies\CookieConstants.cs" />
+    <Compile Include="Cookies\CookieSettings.cs" />
+    <Compile Include="Dates\DateConvert.cs" />
+    <Compile Include="Dates\Enums\EDayWeek.cs" />
+    <Compile Include="Decimals\DecimalExtensions.cs" />
+    <Compile Include="Dictionaries\ExceptionDictionary.cs" />
+    <Compile Include="Dictionaries\MessageDictionary.cs" />
+    <Compile Include="Dictionaries\ModelDictionary.cs" />
+    <Compile Include="Doubles\DoubleExtensions.cs" />
+    <Compile Include="Enums\EAction.cs" />
+    <Compile Include="Enums\EController.cs" />
+    <Compile Include="Enums\EntityType.cs" />
+    <Compile Include="Enums\Enumerator.cs" />
+    <Compile Include="Enums\EnumExtensions.cs" />
+    <Compile Include="Enums\EPartialView.cs" />
+    <Compile Include="Exceptions\AppSettings\InvalidServerException.cs" />
+    <Compile Include="Exceptions\AppSettings\UnconfiguredServerException.cs" />
+    <Compile Include="Exceptions\Client\AcceptedException.cs" />
+    <Compile Include="Exceptions\Client\BadRequestException.cs" />
+    <Compile Include="Exceptions\Client\ConflictException.cs" />
+    <Compile Include="Exceptions\Client\ExpectationFailedException.cs" />
+    <Compile Include="Exceptions\Client\ForbiddenException.cs" />
+    <Compile Include="Exceptions\Client\InternalServerException.cs" />
+    <Compile Include="Exceptions\Client\MethodNotAllowedException.cs" />
+    <Compile Include="Exceptions\Client\NotAcceptableException.cs" />
+    <Compile Include="Exceptions\Client\NotFoundException.cs" />
+    <Compile Include="Exceptions\Client\PreconditionFailedException.cs" />
+    <Compile Include="Exceptions\Client\ServerNotFoundException.cs" />
+    <Compile Include="Exceptions\Client\UnauthorizedException.cs" />
+    <Compile Include="Exceptions\Enums\EErrorCode.cs" />
+    <Compile Include="Exceptions\Messages\MessageException.cs" />
+    <Compile Include="Exceptions\Session\SessionNotFoundException.cs" />
+    <Compile Include="Exports\CsvExport.cs" />
+    <Compile Include="Factories\StreamFactory.cs" />
+    <Compile Include="Files\FileResolver.cs" />
+    <Compile Include="Files\FileSettings.cs" />
+    <Compile Include="Files\IFileResolver.cs" />
+    <Compile Include="Files\ServerDomainResolver.cs" />
+    <Compile Include="Integers\IntegerExtensions.cs" />
+    <Compile Include="JsonResults\JsonResultFactory.cs" />
+    <Compile Include="Objects\ObjectExtensions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\HomeText.Designer.cs" />
+    <Compile Include="Resources\HomeText.en.Designer.cs" />
+    <Compile Include="Settings\AppSettings.cs" />
+    <Compile Include="Settings\RootResolver.cs" />
+    <Compile Include="Settings\SessionSettings.cs" />
+    <Compile Include="Strings\StringExtensions.cs" />
+    <Compile Include="Tables\TableHelper.cs" />
+    <Compile Include="TempDatas\ETempData.cs" />
+    <Compile Include="TempDatas\TempDataFactory.cs" />
+    <Compile Include="TempDatas\TempDataHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\HomeText.en.resx" />
+    <EmbeddedResource Include="Resources\HomeText.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

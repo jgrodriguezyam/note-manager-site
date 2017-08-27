@@ -1,0 +1,693 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="RequiredField" xml:space="preserve">
+    <value>Required field</value>
+  </data>
+  <data name="InvalidFormat" xml:space="preserve">
+    <value>Invalid format</value>
+  </data>
+  <data name="CanNotBeMoreThan50Characters" xml:space="preserve">
+    <value>Can not be more than 50 characters</value>
+  </data>
+  <data name="CanNotBeMoreThan100Characters" xml:space="preserve">
+    <value>Can not be more than 100 characters</value>
+  </data>
+  <data name="CanNotBeMoreThan15Characters" xml:space="preserve">
+    <value>Can not be more than 15 characters</value>
+  </data>
+  <data name="Min6Characters" xml:space="preserve">
+    <value>Min 6 characters</value>
+  </data>
+  <data name="PasswordsDoNotMatch" xml:space="preserve">
+    <value>Passwords do not match</value>
+  </data>
+  <data name="CanNotBeMorThan20Characters" xml:space="preserve">
+    <value>Can not be more than 20 characters</value>
+  </data>
+  <data name="Documentorequerido" xml:space="preserve">
+    <value>Required document</value>
+  </data>
+  <data name="CheckIn" xml:space="preserve">
+    <value>Check In</value>
+  </data>
+  <data name="Dashboard" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="ChangePassword" xml:space="preserve">
+    <value>Change Password</value>
+  </data>
+  <data name="SingOff" xml:space="preserve">
+    <value>Sing off</value>
+  </data>
+  <data name="RecommendFriends" xml:space="preserve">
+    <value>Recommend friends</value>
+  </data>
+  <data name="Amount" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="Months" xml:space="preserve">
+    <value>Months</value>
+  </data>
+  <data name="Interest" xml:space="preserve">
+    <value>Interest</value>
+  </data>
+  <data name="Monthly" xml:space="preserve">
+    <value>Monthly</value>
+  </data>
+  <data name="Biweekly" xml:space="preserve">
+    <value>Biweekly</value>
+  </data>
+  <data name="MonthlyPayments" xml:space="preserve">
+    <value>Monthly Payments</value>
+  </data>
+  <data name="TotaToPay" xml:space="preserve">
+    <value>Total to pay</value>
+  </data>
+  <data name="AcquisitionCost" xml:space="preserve">
+    <value>Acquisition cost</value>
+  </data>
+  <data name="YourFirstPaymentWouldBe" xml:space="preserve">
+    <value>Your first payment would be</value>
+  </data>
+  <data name="Apply" xml:space="preserve">
+    <value>Apply</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="PhoneNumber" xml:space="preserve">
+    <value>Phone Number</value>
+  </data>
+  <data name="EmailAddress" xml:space="preserve">
+    <value>Email Address</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="ConfirmPassword" xml:space="preserve">
+    <value>Confirm Password</value>
+  </data>
+  <data name="GoToHome" xml:space="preserve">
+    <value>Go to home</value>
+  </data>
+  <data name="YouHaveSuccessfullyRegistered" xml:space="preserve">
+    <value>You have successfully registered</value>
+  </data>
+  <data name="LogIn" xml:space="preserve">
+    <value>Log In</value>
+  </data>
+  <data name="ForgotPassword" xml:space="preserve">
+    <value>Forgot password</value>
+  </data>
+  <data name="CurrenPassword" xml:space="preserve">
+    <value>Current password</value>
+  </data>
+  <data name="NewPassword" xml:space="preserve">
+    <value>New password</value>
+  </data>
+  <data name="ConfirmNewPassword" xml:space="preserve">
+    <value>Confirm new password</value>
+  </data>
+  <data name="Change" xml:space="preserve">
+    <value>Change</value>
+  </data>
+  <data name="PasswordChangedSuccessfully" xml:space="preserve">
+    <value>Password changed successfully</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="ProvideYourRecommendedEmailAddress" xml:space="preserve">
+    <value>Provide your recommended email address</value>
+  </data>
+  <data name="ProvideTheNameOfYourRecommended" xml:space="preserve">
+    <value>Provide the name of your recommended</value>
+  </data>
+  <data name="Invite" xml:space="preserve">
+    <value>Invite</value>
+  </data>
+  <data name="InvitationSentTo" xml:space="preserve">
+    <value>Invitation sent to</value>
+  </data>
+  <data name="RecoverPassword" xml:space="preserve">
+    <value>Recover password</value>
+  </data>
+  <data name="IfYouCanNotLogInBecauseYouHaveForgottenYourPassword" xml:space="preserve">
+    <value>If you can not log in because you have forgotten your password, please enter your email in the following field.</value>
+  </data>
+  <data name="SendPassword" xml:space="preserve">
+    <value>Send Password</value>
+  </data>
+  <data name="EditSolicitude" xml:space="preserve">
+    <value>Edit Solicitude</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="GeneralData" xml:space="preserve">
+    <value>GENERAL DATA</value>
+  </data>
+  <data name="WhatIsYourFirstName" xml:space="preserve">
+    <value>What is your first name?</value>
+  </data>
+  <data name="WhatIsYourMiddleName" xml:space="preserve">
+    <value>What is your middle name?</value>
+  </data>
+  <data name="WhatIsYouLastName" xml:space="preserve">
+    <value>What is your Last name?</value>
+  </data>
+  <data name="Gender" xml:space="preserve">
+    <value>Gender</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="Male" xml:space="preserve">
+    <value>Male</value>
+  </data>
+  <data name="Female" xml:space="preserve">
+    <value>Female</value>
+  </data>
+  <data name="BirthDate" xml:space="preserve">
+    <value>Birth Date</value>
+  </data>
+  <data name="CountryOfOrigin" xml:space="preserve">
+    <value>Country of Origin</value>
+  </data>
+  <data name="StateOfOrigin" xml:space="preserve">
+    <value>State of Origin</value>
+  </data>
+  <data name="YearsLivingInTheUSA" xml:space="preserve">
+    <value>Years living in the USA</value>
+  </data>
+  <data name="WhatIsSocialSecurityNumber" xml:space="preserve">
+    <value>What is social security number?</value>
+  </data>
+  <data name="IDType" xml:space="preserve">
+    <value>ID type</value>
+  </data>
+  <data name="IDNumber" xml:space="preserve">
+    <value>ID number</value>
+  </data>
+  <data name="PlaceOfIssueOfID" xml:space="preserve">
+    <value>Place of issue of ID</value>
+  </data>
+  <data name="WhereDoYoyReside" xml:space="preserve">
+    <value>Where do you reside?</value>
+  </data>
+  <data name="WhenDoesYouContractEnd" xml:space="preserve">
+    <value>When does your contract end?</value>
+  </data>
+  <data name="HomePhoneNumber" xml:space="preserve">
+    <value>Home Phone Number</value>
+  </data>
+  <data name="MobilePhoneNumber" xml:space="preserve">
+    <value>Mobile Phone Number</value>
+  </data>
+  <data name="WhatWouldBeTheBestTimeToCall" xml:space="preserve">
+    <value>What would be the best time to call?</value>
+  </data>
+  <data name="WhatIsYouCellPhoneCompany" xml:space="preserve">
+    <value>What is your cell phone company?</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="SavedSuccessfully" xml:space="preserve">
+    <value>Saved successfully</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>ADDRESS</value>
+  </data>
+  <data name="StreetApartament" xml:space="preserve">
+    <value># Street, #apartament</value>
+  </data>
+  <data name="ZipCode" xml:space="preserve">
+    <value>Zip code</value>
+  </data>
+  <data name="City" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="State" xml:space="preserve">
+    <value>State</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="FinalcialInformation" xml:space="preserve">
+    <value>FINANCIAL INFORMATION</value>
+  </data>
+  <data name="MonthlyIncome" xml:space="preserve">
+    <value>Monthly Income</value>
+  </data>
+  <data name="More" xml:space="preserve">
+    <value>More</value>
+  </data>
+  <data name="MonthlyExpenses" xml:space="preserve">
+    <value>Monthly Expenses</value>
+  </data>
+  <data name="DoesSomeoneEconomicallyDependOnYou" xml:space="preserve">
+    <value>Does someone economically depend on you?</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>YES</value>
+  </data>
+  <data name="Not" xml:space="preserve">
+    <value>NOT</value>
+  </data>
+  <data name="DoYouHaveABanckAccount" xml:space="preserve">
+    <value>Do you have a bank account?</value>
+  </data>
+  <data name="NameOfBanck" xml:space="preserve">
+    <value>Name of bank</value>
+  </data>
+  <data name="AccountNumber" xml:space="preserve">
+    <value>Account number</value>
+  </data>
+  <data name="Job" xml:space="preserve">
+    <value>JOB</value>
+  </data>
+  <data name="NameOfEmployerCompany" xml:space="preserve">
+    <value>Name of employer company</value>
+  </data>
+  <data name="JobPosition" xml:space="preserve">
+    <value>Job position</value>
+  </data>
+  <data name="HowLongHaveYouBeenWorkingAtYourJob" xml:space="preserve">
+    <value>How long have you been working at your job?</value>
+  </data>
+  <data name="NameOfYouSupervisor" xml:space="preserve">
+    <value>Name of you supervisor</value>
+  </data>
+  <data name="WorkPhoneNumber" xml:space="preserve">
+    <value>Work phone number</value>
+  </data>
+  <data name="WorkingHoursPerWeek" xml:space="preserve">
+    <value>Working hours per week</value>
+  </data>
+  <data name="WhatKindOfActivitiesDoYouDoInYourJob" xml:space="preserve">
+    <value>What kind of activities do you do in your job?</value>
+  </data>
+  <data name="AddressOfYouEmployment" xml:space="preserve">
+    <value>Address of your employment</value>
+  </data>
+  <data name="RefereneFromAFamilyWhoDoesNotLiveAtHome" xml:space="preserve">
+    <value>REFERENCE FROM A FAMILY WHO DOES NOT LIVE AT HOME</value>
+  </data>
+  <data name="RelationshipWithTheApplicant" xml:space="preserve">
+    <value>Relationship with the applicant</value>
+  </data>
+  <data name="AddressFamilyReference" xml:space="preserve">
+    <value>ADDRESS FAMILY REFERENCE</value>
+  </data>
+  <data name="Documents" xml:space="preserve">
+    <value>DOCUMENTS</value>
+  </data>
+  <data name="ProofOfAddress" xml:space="preserve">
+    <value>Proof of address</value>
+  </data>
+  <data name="ProofOfPayment" xml:space="preserve">
+    <value>Proof of payment</value>
+  </data>
+  <data name="IdCredential" xml:space="preserve">
+    <value>Id credential</value>
+  </data>
+  <data name="BankAccountStatement" xml:space="preserve">
+    <value>Bank account statement</value>
+  </data>
+  <data name="DeclarationAndAuthorization" xml:space="preserve">
+    <value>DECLARATION AND AUTHORIZATION</value>
+  </data>
+  <data name="Acept" xml:space="preserve">
+    <value>Acept</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="AnEmailHasBeenSentTo" xml:space="preserve">
+    <value>An email has been sent to:</value>
+  </data>
+  <data name="MustBe9Digits" xml:space="preserve">
+    <value>Must be 9 digits</value>
+  </data>
+  <data name="CanNotBeMoreThan30Characteres" xml:space="preserve">
+    <value>Can not be more than 30 characters</value>
+  </data>
+  <data name="HowMany" xml:space="preserve">
+    <value>How many?</value>
+  </data>
+  <data name="MustBe5Digist" xml:space="preserve">
+    <value>Must be 5 digits</value>
+  </data>
+  <data name="AddressReference" xml:space="preserve">
+    <value>ADDRESS REFERENCE</value>
+  </data>
+  <data name="CanNotBeMoreThan200Characteres" xml:space="preserve">
+    <value>Can not be more than 200 characters</value>
+  </data>
+  <data name="Refence" xml:space="preserve">
+    <value>REFERENCE</value>
+  </data>
+  <data name="PlaseSelectAPDFOrJPGFile" xml:space="preserve">
+    <value>Please select a PDF or JPG file</value>
+  </data>
+  <data name="Spanish" xml:space="preserve">
+    <value>Spanish</value>
+  </data>
+  <data name="English" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="AccountActivated" xml:space="preserve">
+    <value>The account is activated</value>
+  </data>
+  <data name="AccountActivatedCorrectly" xml:space="preserve">
+    <value>Account successfully activated</value>
+  </data>
+  <data name="RecordNotFound" xml:space="preserve">
+    <value>Record not ound</value>
+  </data>
+  <data name="InvalidCredentials" xml:space="preserve">
+    <value>Invalid credentials</value>
+  </data>
+  <data name="YouDoNotHavePermissionsToChangeThePassword" xml:space="preserve">
+    <value>You do not have permissions to change the password</value>
+  </data>
+  <data name="AConflictOccurred" xml:space="preserve">
+    <value>A conflict occurred</value>
+  </data>
+  <data name="InvalidKey" xml:space="preserve">
+    <value>Invalid key</value>
+  </data>
+  <data name="InvalidLapseOfTime" xml:space="preserve">
+    <value>Invalid lapse of time</value>
+  </data>
+  <data name="InvalidSerial" xml:space="preserve">
+    <value>Invalid serial</value>
+  </data>
+  <data name="InvalidDate" xml:space="preserve">
+    <value>Invalid Date</value>
+  </data>
+  <data name="AlreadyAssignedAddress" xml:space="preserve">
+    <value>Already assigned address</value>
+  </data>
+  <data name="ValueCanNotBeZero" xml:space="preserve">
+    <value>ValueCanNotBeZero</value>
+  </data>
+  <data name="TheValueIsNotZero" xml:space="preserve">
+    <value>The value is not zero</value>
+  </data>
+  <data name="ReferenceDoesNotExist" xml:space="preserve">
+    <value>Reference does not exist</value>
+  </data>
+  <data name="BankVouchersAlreadyExist" xml:space="preserve">
+    <value>Bank vouchers already exist</value>
+  </data>
+  <data name="AReceiptAlreadyExists" xml:space="preserve">
+    <value>A receipt already exists</value>
+  </data>
+  <data name="RegisteredMailAlreadyExists" xml:space="preserve">
+    <value>Registered mail already exists</value>
+  </data>
+  <data name="TheSurveyIsAlreadyAssigned" xml:space="preserve">
+    <value>The survey is already assigned</value>
+  </data>
+  <data name="UserNameAlreadyExists" xml:space="preserve">
+    <value>User name already exists</value>
+  </data>
+  <data name="NotAValidFile" xml:space="preserve">
+    <value>Not a valid file</value>
+  </data>
+  <data name="TheFileIsTooLarge" xml:space="preserve">
+    <value>TheFileIsTooLarge</value>
+  </data>
+  <data name="CanNotChangeStatus" xml:space="preserve">
+    <value>CanNotChangeStatus</value>
+  </data>
+  <data name="ApplyForANewLoan" xml:space="preserve">
+    <value>Apply for a new loan</value>
+  </data>
+  <data name="Historical" xml:space="preserve">
+    <value>Historical</value>
+  </data>
+  <data name="Prepaid" xml:space="preserve">
+    <value>Prepaid</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>Profile</value>
+  </data>
+  <data name="RequestStatus" xml:space="preserve">
+    <value>Request status</value>
+  </data>
+  <data name="MessageSent" xml:space="preserve">
+    <value>Message sent</value>
+  </data>
+  <data name="NewComment" xml:space="preserve">
+    <value>New comment</value>
+  </data>
+  <data name="YouDoNotHavePermission" xml:space="preserve">
+    <value>You do not have permission</value>
+  </data>
+  <data name="LogInAsAdministrator" xml:space="preserve">
+    <value>Log in as administrator</value>
+  </data>
+  <data name="ContractEndDate" xml:space="preserve">
+    <value>Contract End Date</value>
+  </data>
+  <data name="MiddleName" xml:space="preserve">
+    <value>Middle Name</value>
+  </data>
+  <data name="SocialSecurityNumber" xml:space="preserve">
+    <value>Social Security Number</value>
+  </data>
+  <data name="IsChecked" xml:space="preserve">
+    <value>IsChecked</value>
+  </data>
+  <data name="IsSurveyComplete" xml:space="preserve">
+    <value>IsSurveyComplete</value>
+  </data>
+  <data name="HireDate" xml:space="preserve">
+    <value>Hire date</value>
+  </data>
+  <data name="WorkActivity" xml:space="preserve">
+    <value>Work activity</value>
+  </data>
+  <data name="HowManyDependents" xml:space="preserve">
+    <value>How many dependents?</value>
+  </data>
+  <data name="Customers" xml:space="preserve">
+    <value>Customers</value>
+  </data>
+  <data name="NoRecordsDisplay" xml:space="preserve">
+    <value>No records to display</value>
+  </data>
+  <data name="CustomerDetail" xml:space="preserve">
+    <value>Customer details</value>
+  </data>
+  <data name="AdquisitionCoste" xml:space="preserve">
+    <value>Adquisition Coste</value>
+  </data>
+  <data name="Motive" xml:space="preserve">
+    <value>Motive</value>
+  </data>
+  <data name="PaymentsFrecuency" xml:space="preserve">
+    <value>Payments Frecuency</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Term" xml:space="preserve">
+    <value>Term</value>
+  </data>
+  <data name="LoanInformation" xml:space="preserve">
+    <value>LOAN INFORMATION</value>
+  </data>
+  <data name="Files" xml:space="preserve">
+    <value>FILES</value>
+  </data>
+  <data name="NoInformationDisplay" xml:space="preserve">
+    <value>No information to display</value>
+  </data>
+  <data name="Approve" xml:space="preserve">
+    <value>Aprobar</value>
+  </data>
+  <data name="Reject" xml:space="preserve">
+    <value>Reject</value>
+  </data>
+  <data name="ToReturn" xml:space="preserve">
+    <value>To return</value>
+  </data>
+  <data name="HasInterestRate" xml:space="preserve">
+    <value>Has a interest rate of the </value>
+  </data>
+  <data name="NotRecommended" xml:space="preserve">
+    <value>Not recommended. Your request will be reviewed in detail to give you an answer.</value>
+  </data>
+  <data name="Recommend" xml:space="preserve">
+    <value>Recommend</value>
+  </data>
+  <data name="InterestRate" xml:space="preserve">
+    <value>Interest rate</value>
+  </data>
+  <data name="MustBe3Digist" xml:space="preserve">
+    <value>Must be 3 digist</value>
+  </data>
+  <data name="RecommendCustomer" xml:space="preserve">
+    <value>Recommend customer</value>
+  </data>
+  <data name="Solicitudes" xml:space="preserve">
+    <value>Solicitudes</value>
+  </data>
+  <data name="YourInterestRateIs" xml:space="preserve">
+    <value>Your interest rate is </value>
+  </data>
+  <data name="ValidateEmail" xml:space="preserve">
+    <value>Validate email</value>
+  </data>
+  <data name="Acepted" xml:space="preserve">
+    <value>Aceptado</value>
+  </data>
+  <data name="InReview" xml:space="preserve">
+    <value>In review</value>
+  </data>
+  <data name="MySolicitudeThis" xml:space="preserve">
+    <value>My solicitude this</value>
+  </data>
+  <data name="Rejected" xml:space="preserve">
+    <value>Rechazado</value>
+  </data>
+  <data name="InProcess" xml:space="preserve">
+    <value>In process</value>
+  </data>
+  <data name="NewCredit" xml:space="preserve">
+    <value>New credit</value>
+  </data>
+  <data name="HaveUnpaidsCredits" xml:space="preserve">
+    <value>Have unpaids credits</value>
+  </data>
+  <data name="OptionNotDisponable" xml:space="preserve">
+    <value>Option not disponable</value>
+  </data>
+  <data name="HavePendingSolicitudes" xml:space="preserve">
+    <value>Have pending solicitudes</value>
+  </data>
+</root>

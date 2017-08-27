@@ -1,0 +1,48 @@
+﻿@using System.Web.Optimization
+@using NoteManager.Infrastructure.Constants
+@using NoteManager.Infrastructure.Enums
+@using NoteManager.Infrastructure.Settings
+@using NoteManager.Infrastructure.Strings
+
+@{
+    var currentAction = Html.ViewContext.RouteData.GetRequiredString("action");
+    var action = currentAction.IsEqualTo(EAction.Create.ToString()) ? EAction.New.ToString() : currentAction;
+    var controller = Html.ViewContext.RouteData.GetRequiredString("controller");
+    var pageWrapperStyle = string.Empty;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Administrador de Notas</title>
+    @Styles.Render(string.Format(WebConstants.RootBundleStyles, "Shared", "Master"))
+</head>
+<body data-root="@RootResolver.Resolver">
+
+<div id="wrapper">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header">
+            @{
+                Html.RenderPartial("_MenuToggleNavigation");
+                Html.RenderPartial("_MenuLogo");
+                Html.RenderPartial("_MenuTop");
+            }
+        </div>
+        @{
+            Html.RenderPartial("_MenuLeft");
+        }
+    </nav>
+
+    <div id="page-wrapper" style="@pageWrapperStyle">
+        @RenderPage("_Alerts.cshtml")
+        @RenderBody()
+    </div>
+</div>
+
+@Scripts.Render(string.Format(WebConstants.RootBundleScripts, "Shared", "Master"))
+@Scripts.Render(string.Format(WebConstants.RootBundleScripts, controller, action))
+</body>
+</html>

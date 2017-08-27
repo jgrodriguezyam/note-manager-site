@@ -1,0 +1,18 @@
+*.user
+**/*.user
+packages/
+**/Service\ References/
+TestResults/
+_ReSharper.NoteManager/
+NoteManager.v11.suo
+*.suo
+NoteManager.DTO/bin/
+NoteManager.DTO/obj/
+NoteManager.Infrastructure/bin/
+NoteManager.Infrastructure/obj/
+NoteManager.IoC/bin/
+NoteManager.IoC/obj/
+NoteManager.Services/bin/
+NoteManager.Services/obj/
+NoteManager/bin/
+NoteManager/obj/

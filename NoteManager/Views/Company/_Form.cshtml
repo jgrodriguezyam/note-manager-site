@@ -1,0 +1,140 @@
+﻿@using NoteManager.Infrastructure.Constants
+@model NoteManager.Models.Companies.Company
+
+@Html.HiddenFor(m => m.Id, Model.Id)
+
+<div class="form-group">
+    <label for="Name" class="col-form-label">Nombre</label>
+    @Html.TextBoxFor(m => m.Name, Model.Name,
+        new
+        {
+            @type = "text",
+            @class = "form-control",
+            @data_role = "none",
+            @required = "true",
+            @data_msg_required = GlobalConstants.RequiredField,
+            @data_val = "true",
+            @data_val_length_max = "50",
+            @data_val_length = "No puedes tener mas de 50 caracteres"
+        })
+    @Html.ValidationMessageFor(m => Model.Name, "", new {@class = "text-danger"})
+</div>
+
+<div class="form-group">
+    <label for="Address" class="col-form-label">Dirección</label>
+    @Html.TextBoxFor(m => m.Address, Model.Address,
+        new
+        {
+            @type = "text",
+            @class = "form-control",
+            @data_role = "none",
+            @required = "true",
+            @data_msg_required = GlobalConstants.RequiredField,
+            @data_val = "true",
+            @data_val_length_max = "100",
+            @data_val_length = "No puedes tener mas de 100 caracteres"
+        })
+    @Html.ValidationMessageFor(m => Model.Address, "", new {@class = "text-danger"})
+</div>
+
+<div class="form-group">
+    <label for="Colony" class="col-form-label">Colonia</label>
+    @Html.TextBoxFor(m => m.Colony, Model.Colony,
+        new
+        {
+            @type = "text",
+            @class = "form-control",
+            @data_role = "none",
+            @required = "true",
+            @data_msg_required = GlobalConstants.RequiredField,
+            @data_val = "true",
+            @data_val_length_max = "50",
+            @data_val_length = "No puedes tener mas de 50 caracteres"
+        })
+    @Html.ValidationMessageFor(m => Model.Colony, "", new {@class = "text-danger"})
+</div>
+
+<div class="form-group">
+    <label for="City" class="col-form-label">Ciudad</label>
+    @Html.TextBoxFor(m => m.City, Model.City,
+        new
+        {
+            @type = "text",
+            @class = "form-control",
+            @data_role = "none",
+            @required = "true",
+            @data_msg_required = GlobalConstants.RequiredField,
+            @data_val = "true",
+            @data_val_length_max = "50",
+            @data_val_length = "No puedes tener mas de 50 caracteres"
+        })
+    @Html.ValidationMessageFor(m => Model.City, "", new {@class = "text-danger"})
+</div>
+
+<div class="form-group">
+    <label for="Rfc" class="col-form-label">RFC</label>
+    @Html.TextBoxFor(m => m.Rfc, Model.Rfc,
+        new
+        {
+            @type = "text",
+            @class = "form-control",
+            @data_role = "none",
+            @required = "true",
+            @data_msg_required = GlobalConstants.RequiredField,
+            @data_val = "true",
+            @data_val_length_max = "50",
+            @data_val_length = "No puedes tener mas de 50 caracteres"
+        })
+    @Html.ValidationMessageFor(m => Model.Rfc, "", new {@class = "text-danger"})
+</div>
+
+<div class="form-group">
+    <label for="OfficePhone" class="col-form-label">Telefono oficina</label>
+    @Html.TextBoxFor(m => m.OfficePhone, Model.OfficePhone,
+        new
+        {
+            @type = "text",
+            @class = "form-control",
+            @data_role = "none",
+            @required = "true",
+            @data_msg_required = GlobalConstants.RequiredField,
+            @data_val = "true",
+            @data_val_length_max = "20",
+            @data_val_length = "No puedes tener mas de 20 caracteres"
+        })
+    @Html.ValidationMessageFor(m => Model.OfficePhone, "", new {@class = "text-danger"})
+</div>
+
+<div class="form-group">
+    <label for="OfficeCellPhone" class="col-form-label">Celular oficina</label>
+    @Html.TextBoxFor(m => m.OfficeCellPhone, Model.OfficeCellPhone,
+        new
+        {
+            @type = "text",
+            @class = "form-control",
+            @data_role = "none",
+            @required = "true",
+            @data_msg_required = GlobalConstants.RequiredField,
+            @data_val = "true",
+            @data_val_length_max = "20",
+            @data_val_length = "No puedes tener mas de 20 caracteres"
+        })
+    @Html.ValidationMessageFor(m => Model.OfficeCellPhone, "", new {@class = "text-danger"})
+</div>
+
+<div class="form-group">
+    <label for="Date" class="col-form-label">Fecha</label>
+    @Html.TextBoxFor(m => m.Date, Model.Date,
+        new
+        {
+            @id = "Date",
+            @class = "form-control",
+            @data_role = "none",
+            @placeholder = "dd/mm/aaaa",
+            @autocomplete = "off",
+            @readonly = "readonly",
+            @required = "true",
+            @data_msg_required = GlobalConstants.RequiredField
+        })
+    @Html.ValidationMessageFor(m => Model.Date, "", new {@class = "text-danger"})
+</div>
