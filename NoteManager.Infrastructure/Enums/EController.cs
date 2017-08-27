@@ -6,6 +6,7 @@
         User = 2,
         Customer = 3,
         Company = 4,
-        Account = 5
+        Account = 5,
+        Print = 6
     }
 }

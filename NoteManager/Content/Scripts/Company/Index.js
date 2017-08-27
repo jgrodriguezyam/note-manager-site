@@ -13,7 +13,8 @@ var filtersTable = ["Name", "Colony", "City"];
 createTable({
     Controller: "Company",
     ClickToSelect: false,
-    Columns: [[nameColumn, "Nombre", true],
+    Columns: [[idColumn, "Codigo", true],
+              [nameColumn, "Nombre", true],
               [addressColumn, "Dirección", true],
               [colonyColumn, "Colonia", true],
               [cityColumn, "Ciudad", true],

@@ -226,6 +226,7 @@
     <Content Include="Content\Scripts\Home\Form.js" />
     <Content Include="Content\Scripts\Home\Index.js" />
     <Content Include="Content\Scripts\Home\New.js" />
+    <Content Include="Content\Scripts\Print\Print.js" />
     <Content Include="Content\Scripts\Table.js" />
     <Content Include="Content\Site.css" />
     <Content Include="favicon.ico" />
@@ -254,6 +255,7 @@
     <Compile Include="Controllers\CompanyController.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PrintController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Mapper\FastMapperConfig.cs" />
     <Compile Include="Models\Bases\SortingAndPagination.cs" />
@@ -264,6 +266,8 @@
     <Compile Include="Models\Customers\CustomerFilter.cs" />
     <Compile Include="Models\Customers\CustomerGridView.cs" />
     <Compile Include="Models\Enums\EGenderType.cs" />
+    <Compile Include="Models\Prints\Print.cs" />
+    <Compile Include="Models\Prints\PrintSheet.cs" />
     <Compile Include="Models\Users\LoginUser.cs" />
     <Compile Include="Models\Users\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -342,6 +346,9 @@
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Account\_Login.cshtml" />
     <Content Include="Views\Shared\_LoginTheme.cshtml" />
+    <Content Include="Views\Print\Print.cshtml" />
+    <Content Include="Views\Print\_Form.cshtml" />
+    <Content Include="Views\Print\PrintSheet.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

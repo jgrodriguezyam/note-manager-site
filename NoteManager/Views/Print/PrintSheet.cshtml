@@ -1,0 +1,84 @@
+﻿@model NoteManager.Models.Prints.Print
+
+@{
+    ViewBag.Title = "PrintSheet";
+    Layout = null;
+}
+
+<style>
+    .centerTable { margin: 0 auto;width: 95%; }
+    .clienteSpace { padding-top: 20px;}
+    .priceSpace { padding-top: 30px; border-bottom: 1px solid black;}
+    .hrLine {margin-top: -4px;}
+    .priceSpaceTwo { padding-top: 20px; border-bottom: 1px solid black;}
+    .promissoryNote { padding-top: 20px;}
+</style>
+
+<table class="centerTable">
+    <tr>
+        <th colspan="8" align="center">@Model.Company.Name</th>
+    </tr>
+    <tr>
+        <th colspan="8" align="center">@Model.Company.Address</th>
+    </tr>
+    <tr>
+        <th colspan="4" align="left">COLONIA: &nbsp; @Model.Company.Colony</th>
+        <th colspan="4" align="right">CIUDAD: &nbsp; @Model.Company.City</th>
+    </tr>
+    <tr>
+        <th colspan="4" align="left">RFC: &nbsp; @Model.Company.Rfc</th>
+        <th colspan="4" align="right">CEL: @Model.Company.OfficeCellPhone &nbsp; OFIC: @Model.Company.OfficePhone</th>
+    </tr>
+    <tr>
+        <th colspan="4" align="left" class="clienteSpace">Cliente: &nbsp; @Model.Customer.Name.ToUpper() @Model.Customer.LastName.ToUpper()</th>
+        <th colspan="4" align="right" class="clienteSpace">Fecha: @Model.Date</th>
+    </tr>
+    <tr>
+        <th colspan="4" align="left">Domicilio: &nbsp; @Model.Customer.Address.ToUpper()</th>
+        <th colspan="4" align="right">Telefono: @Model.Customer.HomePhone.ToUpper()</th>
+    </tr>
+    <tr>
+        <th colspan="4" align="left">Municipio: @Model.Customer.Municipality.ToUpper()</th>
+        <th colspan="4" align="right">Folio: </th>
+    </tr>
+    <tr>
+        <th align="center" class="priceSpace">Pollos</th>
+        <th align="center" class="priceSpace">Peso Bruto</th>
+        <th align="center" class="priceSpace">Tara</th>
+        <th align="center" class="priceSpace">Peso Neto</th>
+        <th align="center" class="priceSpace">Promedio</th>
+        <th align="center" class="priceSpace">Precio</th>
+        <th align="center" class="priceSpace" colspan="2">Importe</th>
+    </tr>
+    <tr>
+        <th align="center" class="priceSpaceTwo"></th>
+        <th align="center" class="priceSpaceTwo"></th>
+        <th align="center" class="priceSpaceTwo"></th>
+        <th align="center" class="priceSpaceTwo"></th>
+        <th align="center" class="priceSpaceTwo"></th>
+        <th align="center" class="priceSpaceTwo">@Model.Price</th>
+        <th align="center" class="priceSpaceTwo" colspan="2"></th>
+    </tr>
+    <tr>
+        <th colspan="4" align="left" class="promissoryNote">Por este pagare me(nos) obligo(amos) y comprometo(emos)
+            a pagar incondicionalmente el día &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; de &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; de &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            a la orden de &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            el valor recibido en mercancias a nuestra entera satisfacción.
+        </th>
+        <th colspan="4" align="left" class="promissoryNote"></th>
+    </tr>
+</table>
+<table class="centerTable" style="padding-top: 20px;">
+    <tr>
+        <th colspan="2" align="center"></th>
+        <th colspan="4" align="center"><hr/></th>
+        <th colspan="2" align="center"></th>
+    </tr>
+</table>
+<table class="centerTable">
+    <tr>
+        <th colspan="2" align="center"></th>
+        <th colspan="4" align="center">Recíbi</th>
+        <th colspan="2" align="center"></th>
+    </tr>
+</table>

@@ -12,7 +12,8 @@ var filtersTable = ["Name", "Colony", "Municipality"];
 createTable({
     Controller: "Customer",
     ClickToSelect: false,
-    Columns: [[fullNameColumn, "Nombre", true],
+    Columns: [[idColumn, "Codigo", true],
+              [fullNameColumn, "Nombre", true],
               [genderColumn, "Genero", true],
               [addressColumn, "Dirección", true],
               [colonyColumn, "Colonia", true],

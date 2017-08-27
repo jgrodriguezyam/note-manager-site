@@ -1,0 +1,56 @@
+﻿@using NoteManager.Infrastructure.Constants
+@using NoteManager.Infrastructure.Dates
+@using NoteManager.Infrastructure.Enums
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Imprimir</h1>
+    </div>
+</div>
+
+@using (Html.BeginForm(EAction.PrintSheet.ToString(), EController.Print.ToString(), FormMethod.Post, new {target = "_blank", @id = "PrintSheet" }))
+{
+    <div class="row">
+        <div class="col-md-12">
+            <form class="row">
+                <div class="form-group col-md-3">
+                    <label for="CustomerId" class="col-form-label">Codigo Cliente</label>
+                    <input type="number" id="CustomerId" name="CustomerId" class="form-control" data-role="none" placeholder="Codigo" autocomplete="off"/>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="CompanyId" class="col-form-label">Compañia</label>
+                    @Html.DropDownList("CompanyId", new List<SelectListItem>(), HtmlHelperConstants.DropDownListDefaultText,
+                        new
+                        {
+                            @id = "CompanyId",
+                            @class = "form-control",
+                            @data_entity = EController.Company,
+                            //@data_option_selected = jobPositionIdSelected,
+                            @required = "true",
+                            @data_msg_required = MessageConstants.RequiredField
+                        })
+                    @Html.ValidationMessage("CompanyId", "", new {@class = "text-danger"})
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="Date" class="col-form-label">Fecha</label>
+                    @Html.TextBox("Date", DateTime.Now.ToDateString(),
+                        new
+                        {
+                            @id = "Date",
+                            @class = "form-control",
+                            @data_role = "none",
+                            @placeholder = "dd/mm/aaaa",
+                            @autocomplete = "off",
+                            @readonly = "readonly",
+                            @required = "true",
+                            @data_msg_required = MessageConstants.RequiredField
+                        })
+                    @Html.ValidationMessage("Date", "", new {@class = "text-danger"})
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="Price" class="col-form-label">Precio</label>
+                    <input type="number" id="Price" name="Price" class="form-control" data-role="none" placeholder="Precio" autocomplete="off" />
+                </div>
+            </form>
+        </div>
+    </div>
+}

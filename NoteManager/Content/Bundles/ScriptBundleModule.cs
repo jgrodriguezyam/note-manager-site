@@ -120,6 +120,17 @@ namespace NoteManager.Content.Bundles
                     "~/Content/Components/JQueryValidation/Scripts/jquery.validate.unobtrusive.min.js"));
 
             #endregion
+
+            #region Print
+
+            bundles.Add(new ScriptBundle(string.Format(WebConstants.RootBundleScripts, EController.Print, EAction.Print))
+                .Include(
+                    "~/Content/Components/JQueryValidation/Scripts/jquery.validate.min.js",
+                    "~/Content/Components/JQueryValidation/Scripts/additional-methods.min.js",
+                    "~/Content/Components/JQueryValidation/Scripts/jquery.validate.unobtrusive.min.js",
+                    "~/Content/Scripts/Print/Print.js"));
+
+            #endregion
         }
     }
 }

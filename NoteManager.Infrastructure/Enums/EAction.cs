@@ -12,6 +12,7 @@
         Edit,
         Update,
         Details,
-        Print
+        Print,
+        PrintSheet
     }
 }
