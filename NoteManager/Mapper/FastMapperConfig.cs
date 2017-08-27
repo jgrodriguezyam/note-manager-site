@@ -24,6 +24,10 @@ namespace NoteManager.Mapper
             TypeAdapterConfig<CustomerResponse, Customer>
                 .NewConfig();
 
+            TypeAdapterConfig<CustomerResponse, CustomerGridView>
+                .NewConfig()
+                .MapFrom(dest => dest.FullName, src => string.Format("{0} {1}", src.Name, src.LastName));
+
             #endregion
 
             #region Company

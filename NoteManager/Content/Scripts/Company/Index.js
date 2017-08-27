@@ -8,7 +8,7 @@ var officePhoneColumn = "OfficePhone";
 var officeCellPhoneColumn = "OfficeCellPhone";
 var dateColumn = "Date";
 
-var filtersTable = ["Name", "Address", "Colony"];
+var filtersTable = ["Name", "Colony", "City"];
 
 createTable({
     Controller: "Company",
@@ -53,7 +53,7 @@ function buttonEdit(buttons) {
 function buttonInfo(buttons) {
     buttons.OperateEvents['click .btnInfo'] = function (event, value, row) {
         var parameters = "id=" + row.Id;
-        redirectWithParameters("Customer", "Details", parameters);
+        redirectWithParameters("Company", "Details", parameters);
     };
 
     return " <button class='btnInfo btn btn-default btn-sm' data-toggle='tooltip' title='Informacion'><i class='fa fa-info-circle'></i></button>";

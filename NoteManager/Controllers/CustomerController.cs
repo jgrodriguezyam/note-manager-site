@@ -78,5 +78,12 @@ namespace NoteManager.Controllers
             var customerGridViews = TypeAdapter.Adapt<List<CustomerGridView>>(findCustomersResponse.Customers);
             return new JsonFactory().Success(customerGridViews, findCustomersResponse.TotalRecords);
         }
+
+        [HttpPost]
+        public JsonResult Delete(int id)
+        {
+            _customerService.Delete(id);
+            return new JsonFactory().Success(GlobalConstants.DeletedSuccessfully);
+        }
     }
 }
