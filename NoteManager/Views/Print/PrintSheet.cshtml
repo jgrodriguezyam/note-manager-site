@@ -7,7 +7,9 @@
     ViewBag.Title = "PrintSheet";
     Layout = null;
 }
+
 @Scripts.Render(string.Format(WebConstants.RootBundleScripts, EController.Print, EAction.PrintSheet))
+
 <style>
     .centerTable { margin: 0 auto;width: 95%; }
     .clienteSpace { padding-top: 20px;}
@@ -15,6 +17,9 @@
     .hrLine {margin-top: -4px;}
     .priceSpaceTwo { padding-top: 20px; border-bottom: 1px solid black;}
     .promissoryNote { padding-top: 20px;}
+    table {
+        font-family: Roman, sans-serif;
+    }
 </style>
 
 <table class="centerTable">
@@ -29,8 +34,8 @@
         <th colspan="4" align="right">CIUDAD: &nbsp; @Model.Company.City</th>
     </tr>
     <tr>
-        <th colspan="4" align="left">RFC: &nbsp; @Model.Company.Rfc</th>
-        <th colspan="4" align="right">CEL: @Model.Company.OfficeCellPhone &nbsp; OFIC: @Model.Company.OfficePhone</th>
+        <th colspan="3" align="left">RFC: &nbsp; @Model.Company.Rfc</th>
+        <th colspan="5" align="right">CEL: @Model.Company.OfficeCellPhone &nbsp; OFIC: @Model.Company.OfficePhone</th>
     </tr>
     <tr>
         <th colspan="4" align="left" class="clienteSpace">Cliente: &nbsp; @Model.Customer.Name.ToUpper() @Model.Customer.LastName.ToUpper()</th>
@@ -85,4 +90,10 @@
         <th colspan="2" align="center"></th>
     </tr>
 </table>
-
+<table class="centerTable" id="TablePrint">
+    <tr>
+        <th colspan="2" align="center"></th>
+        <th colspan="4" align="center"><button type="button" id="OpenPrint" style="width: 250px;">Imprimir</button></th>
+        <th colspan="2" align="center"></th>
+    </tr>
+</table>

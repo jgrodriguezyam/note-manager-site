@@ -350,6 +350,7 @@
     <Content Include="Views\Print\Print.cshtml" />
     <Content Include="Views\Print\_Form.cshtml" />
     <Content Include="Views\Print\PrintSheet.cshtml" />
+    <None Include="Properties\PublishProfiles\Release.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
