@@ -1,6 +1,7 @@
 ﻿$(function () {
     closeWindow();
     openPrint();
+    openPrintEnter();
 });
 
 function closeWindow() {
@@ -15,5 +16,14 @@ function openPrint() {
     $("#OpenPrint").click(function () {
         $("#TablePrint").hide();
         window.print();
+    });
+}
+
+function openPrintEnter() {
+    $(document).bind('keydown', function (e) {
+        if (e.which == 13) {
+            $("#TablePrint").hide();
+            window.print();
+        }
     });
 }
