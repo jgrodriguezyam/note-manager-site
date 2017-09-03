@@ -29,6 +29,7 @@ function openPrintSheet() {
     $("#CustomerId").keyup(function (e) {
         if (e.keyCode == 13) {
             $("#PrintSheet").submit();
+            $(this).val("");
         }
     });
 }

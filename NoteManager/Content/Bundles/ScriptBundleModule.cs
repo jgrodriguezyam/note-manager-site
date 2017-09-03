@@ -130,6 +130,11 @@ namespace NoteManager.Content.Bundles
                     "~/Content/Components/JQueryValidation/Scripts/jquery.validate.unobtrusive.min.js",
                     "~/Content/Scripts/Print/Print.js"));
 
+            bundles.Add(new ScriptBundle(string.Format(WebConstants.RootBundleScripts, EController.Print, EAction.PrintSheet))
+                .Include(
+                    "~/Content/Components/JQuery/Scripts/JQuery.min.js",
+                    "~/Content/Scripts/Print/PrintSheet.js"));
+
             #endregion
         }
     }

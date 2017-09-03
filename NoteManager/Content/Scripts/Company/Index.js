@@ -6,7 +6,7 @@ var cityColumn = "City";
 var rfcColumn = "Rfc";
 var officePhoneColumn = "OfficePhone";
 var officeCellPhoneColumn = "OfficeCellPhone";
-var dateColumn = "Date";
+var folioColumn = "Folio";
 
 var filtersTable = ["Name", "Colony", "City"];
 
@@ -21,7 +21,7 @@ createTable({
               [rfcColumn, "RFC", true],
               [officePhoneColumn, "Telefono", true],
               [officeCellPhoneColumn, "Celular", true],
-              [dateColumn, "Fecha", true]],
+              [folioColumn, "Folio", true]],
     Buttons: [buttonInfo, buttonEdit, buttonDelete],
     Filters: filtersTable,
     CardView: { ApplyCardView: true, WidthPerApply: 600 },

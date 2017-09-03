@@ -121,20 +121,3 @@
         })
     @Html.ValidationMessageFor(m => Model.OfficeCellPhone, "", new {@class = "text-danger"})
 </div>
-
-<div class="form-group">
-    <label for="Date" class="col-form-label">Fecha</label>
-    @Html.TextBoxFor(m => m.Date, Model.Date,
-        new
-        {
-            @id = "Date",
-            @class = "form-control",
-            @data_role = "none",
-            @placeholder = "dd/mm/aaaa",
-            @autocomplete = "off",
-            @readonly = "readonly",
-            @required = "true",
-            @data_msg_required = MessageConstants.RequiredField
-        })
-    @Html.ValidationMessageFor(m => Model.Date, "", new {@class = "text-danger"})
-</div>

@@ -42,12 +42,14 @@ namespace NoteManager.Controllers
             var customer = TypeAdapter.Adapt<CustomerResponse, Customer>(customerResponse);
             var companyResponse = _companyService.Get(printSheet.CompanyId);
             var company = TypeAdapter.Adapt<CompanyResponse, Company>(companyResponse);
+            var folio = _companyService.GetFolio(printSheet.CompanyId).Folio;
 
             var print = new Print();
             print.Customer = customer;
             print.Company = company;
             print.Date = printSheet.Date;
             print.Price = printSheet.Price;
+            print.Folio = folio;
 
             return View(EAction.PrintSheet.ToString(), print);
         }

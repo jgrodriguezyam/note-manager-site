@@ -1,10 +1,13 @@
-﻿@model NoteManager.Models.Prints.Print
+﻿@using System.Web.Optimization
+@using NoteManager.Infrastructure.Constants
+@using NoteManager.Infrastructure.Enums
+@model NoteManager.Models.Prints.Print
 
 @{
     ViewBag.Title = "PrintSheet";
     Layout = null;
 }
-
+@Scripts.Render(string.Format(WebConstants.RootBundleScripts, EController.Print, EAction.PrintSheet))
 <style>
     .centerTable { margin: 0 auto;width: 95%; }
     .clienteSpace { padding-top: 20px;}
@@ -39,7 +42,7 @@
     </tr>
     <tr>
         <th colspan="4" align="left">Municipio: @Model.Customer.Municipality.ToUpper()</th>
-        <th colspan="4" align="right">Folio: </th>
+        <th colspan="4" align="right">Folio: @Model.Folio</th>
     </tr>
     <tr>
         <th align="center" class="priceSpace">Pollos</th>
@@ -82,3 +85,4 @@
         <th colspan="2" align="center"></th>
     </tr>
 </table>
+

@@ -37,5 +37,11 @@ namespace NoteManager.Services.Implements
             var uri = string.Format("{0}/{1}", PluralEntityConstants.Companies, id);
             Request.Delete(uri);
         }
+
+        public GetFolioResponse GetFolio(int companyId)
+        {
+            var uri = string.Format("{0}/folio/{1}", PluralEntityConstants.Companies, companyId);
+            return Request.Get<GetFolioResponse>(uri);
+        }
     }
 }

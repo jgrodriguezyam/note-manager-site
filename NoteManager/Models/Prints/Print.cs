@@ -9,5 +9,6 @@ namespace NoteManager.Models.Prints
         public Company Company { get; set; }
         public string Date { get; set; }
         public decimal Price { get; set; }
+        public int Folio { get; set; }
     }
 }

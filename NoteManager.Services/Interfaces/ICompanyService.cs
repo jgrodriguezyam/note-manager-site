@@ -9,5 +9,6 @@ namespace NoteManager.Services.Interfaces
         void Update(CompanyRequest request);
         CompanyResponse Get(int id);
         void Delete(int id);
+        GetFolioResponse GetFolio(int companyId);
     }
 }

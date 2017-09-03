@@ -60,6 +60,7 @@
     <Compile Include="Companies\CompanyResponse.cs" />
     <Compile Include="Companies\FindCompaniesRequest.cs" />
     <Compile Include="Companies\FindCompaniesResponse.cs" />
+    <Compile Include="Companies\GetFolioResponse.cs" />
     <Compile Include="Customers\CustomerRequest.cs" />
     <Compile Include="Customers\CustomerResponse.cs" />
     <Compile Include="Customers\FindCustomersRequest.cs" />

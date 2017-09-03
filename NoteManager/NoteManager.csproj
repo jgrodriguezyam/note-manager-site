@@ -226,6 +226,7 @@
     <Content Include="Content\Scripts\Home\Form.js" />
     <Content Include="Content\Scripts\Home\Index.js" />
     <Content Include="Content\Scripts\Home\New.js" />
+    <Content Include="Content\Scripts\Print\PrintSheet.js" />
     <Content Include="Content\Scripts\Print\Print.js" />
     <Content Include="Content\Scripts\Table.js" />
     <Content Include="Content\Site.css" />
